@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -191,20 +193,95 @@
 
             </div>
         </section>
+        <section class="contact-section">
+            <h2 class="title">Get In Touch</h2>
+            <p class="subtitle">
+                I'm always open to discussing new opportunities and interesting projects
+            </p>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="form-card">
+                    <h3>Send Me a Message</h3>
+                    <form action="https://formspree.io/f/xyzjplzg" method="post" class="contact-form"
+                        onsubmit="handleSubmit(event)">
+                        <label>Name:</label>
+                        <input type="text" name="name" placeholder="Your Full Name" required>
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <label>Message:</label>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="info-card">
+                    <h3>Let's Connect</h3>
+                    <p>
+                        I'm open to new opportunities and would love to hear from you!
+                    </p>
+
+                    <div class="info-box">
+                        <strong>Email:</strong>
+                        <p>abhi001422@gmail.com</p>
+                    </div>
+                    <div class="info-box">
+                        <strong>Phone:</strong>
+                        <p>+91 9891966530</p>
+                    </div>
+                    <div class="info-box">
+                        <strong>LinkedIn:</strong>
+                        <p><a href="https://www.linkedin.com/in/abhishek-rajput-526320361" target="_blank">Connect with
+                                me</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
     <hr>
-    <footer>
-        <section class="contact-section" id="contact">
-            <h2>Contact Me</h2>
-            <form  action = "https://formspree.io/f/xyzjplzg" method = "post" class="contact-form" onsubmit="handleSubmit(event)">
-                <input type="text" name="name" placeholder="Your Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
-                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h2>Abhishek Rajput</h2>
+                <p>Frontend Developer & IT Enthusiast passionate about creating user-friendly applications with modern
+                    web technologies.</p>
+                <div class="footer-icons">
+                    <a href="mailto:abhi001422@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+919891966530" title="Phone"><i class="fas fa-phone-alt"></i></a>
+                    <a href="https://www.linkedin.com/in/abhishek-rajput-526320361" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Frontend Development</li>
+                    <li>Full Stack Solutions</li>
+                    <li>Web Applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+        <p class="footer-bottom">© 2025 Abhishek Rajput. All rights reserved. Built with HTML, CSS & 💙</p>
     </footer>
+
     <script src=" index.js"></script>
 </body>
 

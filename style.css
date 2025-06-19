@@ -419,67 +419,89 @@ nav .right ul li:hover {
   gap: 10px; /* This adds space between buttons */
   flex-wrap: wrap; /* optional: wraps on smaller screens */
 }
-footer {
-  background-color: #1a0e2b;
-  padding: 60px 20px;
-  color: white;
-}
-/* Contact Form Footer Section */
+
 .contact-section {
-  background-color: #1e102d; /* Changeable: dark background */
   padding: 60px 20px;
-  color: #ffffff;
-}
-
-.contact-section h2 {
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #ffffff; /* Changeable */
 }
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #2e1a47; /* Changeable */
+.title {
+  font-size: 36px;
+  color: #eaebf1;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #e6e2e2;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-card,
+.info-card {
+  background: #f9f9f9;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 14px;
+.form-card h3,
+.info-card h3 {
+  color: #1e2b7c;
   margin-bottom: 20px;
-  border: none;
-  border-radius: 8px;
-  background-color: #3a2760; /* Changeable */
-  color: #ffffff;
-  font-size: 16px;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #bbbbbb;
+.form-card label {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.contact-form button {
+.form-card input,
+.form-card textarea {
   width: 100%;
-  padding: 14px;
-  font-size: 18px;
-  background-color: #660bce; /* Changeable */
-  color: #ffffff;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-card button {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #3b66f8;
+  color: #fff;
+  padding: 12px;
   border: none;
   border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: #4e09a3; /* Changeable */
+.info-box {
+  background: #e9f1ff;
+  margin: 15px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
 }
 
+.info-box a {
+  text-decoration: none;
+  color: #1e2b7c;
+  font-weight: bold;
+}
 /* Responsive (Mobile) */
 @media (max-width: 600px) {
   .contact-form {
@@ -490,3 +512,80 @@ footer {
     font-size: 28px;
   }
 }
+.footer {
+  background-color: #0e2a8b;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-column h2,
+.footer-column h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column li {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 6px;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #cce3ff;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
+.footer-icons {
+  margin-top: 10px;
+}
+
+.footer-icons a img {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer hr {
+  margin: 30px 0;
+  border: 0.5px solid #ffffff40;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #ccd;
+}
+
