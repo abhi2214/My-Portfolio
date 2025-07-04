@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     "About": ".about-education",
     "Skills": ".skills-section",
     "Project": ".projects-section",
-    "Contact Me": "footer",
+    "Contact Me": "contact-section",
     "Service": ".projects-section",  // You can update to a different section if needed
     "CV": ".about-education" // Since CV download is there
   };
 
-  // Select all navbar list items
+
   const navItems = document.querySelectorAll("nav .right ul li");
 
   navItems.forEach(item => {
@@ -48,5 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
       msg.textContent = "Oops! There was a problem.";
     }
   });
-
+  window.onscroll = function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.classList.add('sticky');
+    } else {
+        nav.classList.remove('sticky');
+    }
+};
 

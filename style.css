@@ -4,6 +4,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --primary-color: #fc7d15;
+    --secondary-color: #281543;
+    --background-color: #1a0e2b;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.btn {
+    background-color: var(--primary-color);
+}
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -330,7 +346,7 @@ nav .right ul li:hover {
 
 }
 .projects-section {
-  background-color: #1e102d; /* deep violet */
+  background-color: #1b0e29; /* deep violet */
   padding: 50px 20px;
   color: #fff;
 }
