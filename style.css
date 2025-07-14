@@ -26,7 +26,27 @@ body {
     background-color: #110224;
     color: #660bce;
 }
+     @media screen and (max-width: 768px) {
+         .navbar {
+             display: none; /* Hide navbar */
+         }
+         .hamburger {
+             display: block; /* Show hamburger icon */
+         }
+     }
 
+     .hamburger {
+         cursor: pointer; /* Make hamburger clickable */
+     }
+
+     .menu {
+         display: none; /* Initially hidden */
+     }
+
+     .menu.active {
+         display: block; /* Show menu when active */
+     }
+     
 /* Navbar styles */
 nav {
     display: flex;
@@ -68,20 +88,81 @@ nav .right ul li:hover {
     transform: scale(1.05);
 }
 
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default, shown on mobile */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001; /* Ensure it's above other elements */
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+/* Fade out second bar */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+/* Rotate third bar */
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
 /* Responsive design */
 /* Add at the end of your CSS */
 
 /* Extra small devices (phones) */
-@media (max-width: 576px) {
+@media (max-width: 768px) { /* Changed from 576px to 768px for broader mobile support */
   nav {
     padding: 15px;
+    flex-direction: row; /* Keep items in a row for mobile, but hide menu */
+    justify-content: space-between;
+  }
+
+  nav .right {
+    display: none; /* Hide the navigation menu by default on mobile */
     flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on your nav height */
+    left: 0;
+    width: 100%;
+    background-color: #2e0e87; /* Same as nav background */
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  nav .right.active { /* Class added by JS when hamburger is clicked */
+    display: flex;
   }
 
   nav .right ul {
     flex-direction: column;
     gap: 15px;
     width: 100%;
+    text-align: center;
+  }
+
+  nav .right ul li {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
   }
 
   .intro-section {
@@ -102,9 +183,51 @@ nav .right ul li:hover {
     font-size: 16px;
   }
 
-  .image-content img {
-    max-width: 100%;
+  .image-content { /* Added to control image on mobile */
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+  }
+
+.image-content {
+    position: relative;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .profile-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Creates square container */
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media (max-width: 768px) {
+    .intro-section {
+      flex-direction: column;
+    }
+    .mobile-first {
+      order: -1;
+      margin-bottom: 30px;
+    }
+    .image-content {
+      max-width: 250px;
+      margin-top: 30px;
+    }
   }
 
   .skills-section,
@@ -127,9 +250,15 @@ nav .right ul li:hover {
     text-align: center;
   }
 }
+     .profile-image {
+         width: 100%; /* Responsive width */
+         height: auto; /* Maintain aspect ratio */
+         display: block; /* Remove inline spacing */
+     }
+     
 
 /* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 991px) {
+@media (min-width: 769px) and (max-width: 991px) { /* Changed from 577px to 769px */
   nav {
     padding: 15px 30px;
   }
@@ -604,4 +733,3 @@ nav .right ul li:hover {
   font-size: 13px;
   color: #ccd;
 }
-
